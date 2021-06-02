@@ -1,0 +1,105 @@
+#container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  flex-direction: column;
+
+
+  .contain {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .photoContain {
+    margin-top: 1rem;
+    background: #ede5da;
+    border: 1px solid #000;
+    border-radius: 0.8rem;
+    .photo {
+      border-radius: 0.8rem;
+    }
+    .slideInput {
+      position: relative;
+      top: 0.5rem;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .information {
+    margin-top: 3rem;
+    padding: 0 1rem;
+
+    .entregas {
+      display: flex;
+
+      .imageBox {
+        width: 80px;
+        height: 80px;
+      }
+      p {
+        font: 500 1rem Archivo;
+        padding: 0 0.9rem;
+      }
+    }
+
+    .money {
+      margin: 2rem 0;
+      display: flex;
+
+      .imageBox {
+        width: 80px;
+        height: 80px;
+      }
+      p {
+        font: 500 1rem Archivo;
+        padding: 0 0.9rem;
+      }
+    }
+
+    .fone {
+      display: flex;
+      .imageBox {
+        width: 80px;
+        height: 80px;
+      }
+      p {
+        font: 500 1rem Archivo;
+        padding: 0 0.9rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  #container {
+    .photoContain {
+      margin-top: 0;
+      width: 100%;
+      height: calc(100vh - 23rem);
+    }
+    .contain {
+      padding: 0rem 0;
+    }
+
+    .information {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      align-items: center;
+      max-width: 1200px;
+
+      .fone {
+        border-left: 1px solid #000;
+        padding-left: 1rem;
+      }
+      .money {
+        padding-left: 1rem;
+      }
+      .entregas {
+        border-right: 1px solid #000;
+      }
+    }
+  }
+}
